@@ -1,7 +1,7 @@
 import img1 from "../assets/logo1.png";
 import img2 from "../assets/image2.png";
-import img3 from "../assets/image8.png";
-import img4 from "../assets/tape.webp";
+// import img3 from "../assets/image8.png";
+// import img4 from "../assets/tape.webp";
 import img5 from "../assets/logo2.png";
 import img6 from "../assets/image6 5.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

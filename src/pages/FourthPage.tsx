@@ -2,7 +2,7 @@ import img1 from "../assets/image8.png";
 import img2 from "../assets/image7.png";
 import img3 from "../assets/image9.png";
 import img4 from "../assets/logo2.png";
-import img5 from "../assets/logo1.png";
+// import img5 from "../assets/logo1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
