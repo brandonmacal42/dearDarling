@@ -1,69 +1,59 @@
 "use client";
 import { useState } from "react";
+import { IntroPage } from "./pages/flowerPage/flowerPage";
+import { SecondPage } from "./pages/SecondPage";
+import { SecondNextPage } from "./pages/ThirdPage";
+import { BeforeThirdPage } from "./pages/FourthPage";
+import { PhrasesPage } from "./pages/PhrasesPage";
+import { SuccessPage } from "./pages/SuccessPage";
+import { FifthPage } from "./pages/FifthPage";
+import { SixthPage } from "./pages/SixthPage";
 
-export default function Page() {
-  const [noCount, setNoCount] = useState(0);
-  const [yesPressed, setYesPressed] = useState(false);
-  const yesButtonSize = noCount * 20 + 16;
+export default function App() {
+  const [step, setStep] = useState<
+    "intro" | "second" | "secondNext" | "beforeThird" | "third" | "sixth" | "phrases" | "success"
+  >("intro");
 
-  const handleNoClick = () => {
-    setNoCount(noCount + 1);
-  };
+  if (step === "intro") {
+    return <IntroPage onNext={() => setStep("second")} />;
+  }
 
-  const getNoButtonText = () => {
-    const phrases = [
-      "No",
-      "Are you sure?",
-      "What if I asked really nicely?",
-      "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
-      "PLEASE POOKIE",
-      "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
-      ":((((",
-      "PRETTY PLEASE",
-      "Estoy muerto",
-      "No :(",
-    ];
 
-    return phrases[Math.min(noCount, phrases.length - 1)];
-  };
+  if (step === "second") {
+    return (
+      <SecondPage
+        onBack={() => setStep("intro")}
+        onNext={() => setStep("secondNext")}
+      />
+    );
+  }
+  if (step === "secondNext") {
+    return <SecondNextPage onNext={() => setStep("beforeThird")} onBack={() => setStep("second")} />;
+  }
+  if (step === "beforeThird") {
+    return (
+      <BeforeThirdPage
+        onBack={() => setStep("secondNext")}
+        onNext={() => setStep("third")}
+      />
+    );
+  }
+  if (step === "third") {
+    return <FifthPage onBack={() => setStep("beforeThird")} onNext={() => setStep("sixth")} />;
+  }
 
-  return (
-    <div className="-mt-16 flex h-screen flex-col items-center justify-center">
-      {yesPressed ? (
-        <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
-        </>
-      ) : (
-        <>
-          <img
-            className="h-[200px]"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
-          />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
-          <div className="flex items-center">
-            <button
-              className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
-              style={{ fontSize: yesButtonSize }}
-              onClick={() => setYesPressed(true)}
-            >
-              Yes
-            </button>
-            <button
-              onClick={handleNoClick}
-              className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
-            >
-              {noCount === 0 ? "No" : getNoButtonText()}
-            </button>
-          </div>
-        </>
-      )}
-    </div>
-  );
+  if (step === "sixth") {
+    return <SixthPage onBack={() => setStep("third")} onNext={() => setStep("phrases")} />;
+  }
+
+  if (step === "phrases") {
+    return (
+      <PhrasesPage
+        onNext={() => setStep("success")}
+        onSuccess={() => setStep("success")}
+      />
+    );
+  }
+
+  return <SuccessPage />;
 }
