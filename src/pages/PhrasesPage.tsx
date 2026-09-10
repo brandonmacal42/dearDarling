@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./flowerPage/flowerPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 type PhrasesPageProps = {
   onNext: () => void;
@@ -9,7 +9,7 @@ type PhrasesPageProps = {
   onSuccess: () => void;
 };
 
-export function PhrasesPage({ onNext, onBack, onSuccess }: PhrasesPageProps) {
+export function PhrasesPage({ onBack, onSuccess }: PhrasesPageProps) {
   const [noCount, setNoCount] = useState(0);
   const yesButtonSize = noCount * 20 + 16;
 
