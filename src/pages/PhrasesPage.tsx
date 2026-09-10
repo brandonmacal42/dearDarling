@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./flowerPage/flowerPage.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 type PhrasesPageProps = {
   onNext: () => void;
+  onBack: () => void;
   onSuccess: () => void;
 };
 
-export function PhrasesPage({ onSuccess }: PhrasesPageProps) {
+export function PhrasesPage({ onNext, onBack, onSuccess }: PhrasesPageProps) {
   const [noCount, setNoCount] = useState(0);
   const yesButtonSize = noCount * 20 + 16;
 
@@ -81,6 +84,15 @@ export function PhrasesPage({ onSuccess }: PhrasesPageProps) {
 
         </div>
       </div>
+
+      <button
+        onClick={onBack}
+        aria-label="Página anterior"
+        className="navigation-button navigation-button--back"
+      >
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </button>
+
     </div>
   );
 }

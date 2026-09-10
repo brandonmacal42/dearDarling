@@ -9,11 +9,11 @@ type SecondPageProps = {
 };
 export function SecondPage({ onNext, onBack }: SecondPageProps) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[url('/src/assets/image4.png')] bg-no-repeat bg-cover bg-center p-6">
+    <div className="responsive-page second-page flex min-h-screen items-center justify-center bg-[url('/src/assets/image4.png')] bg-no-repeat bg-cover bg-center p-6">
 
-      <div className="relative flex h-[90vh] w-[min(140vw,1500px)] max-h-[1960px] items-center justify-between p-10 overflow-hidden rounded-[32px] ">
+      <div className="responsive-page__layout relative flex h-[90vh] w-[min(140vw,1500px)] max-h-[1960px] items-center justify-between p-10  rounded-[32px] ">
         {/* <div className="absolute  flex justify-between inset-0" /> */}
-        <div className="relative z-10 flex max-w-m flex-col items-center  rounded-3xl text-center left-[9%] max-w-[500px]">
+        <div className="responsive-page__copy relative z-10 flex max-w-m flex-col items-center  rounded-3xl text-center left-[9%] max-w-[500px]">
           <h1 className="text-black-600 text-7xl z-40  nanum-pen-script-regular text-[#db8b9d]" >01</h1>
           <h1 className="text-black-600 text-5xl z-40  nanum-pen-script-regular text-[#62363a] mb-10">Se que probablemente estés molesto conmigo</h1>
           <p className="max-w-lg text-center text-base leading-8 text-gray-700 sm:text-lg  montserrat">
@@ -27,8 +27,8 @@ export function SecondPage({ onNext, onBack }: SecondPageProps) {
           </p>
 
         </div>
-        <div className="relative z-10 flex max-w-xl flex-col items-center text-center right-[10%]">
-          <div className="relative justify-items-center h-[620px] w-[520px]  rounded-xl">
+        <div className="responsive-page__media relative z-10 flex max-w-xl flex-col items-center text-center right-[10%]">
+          <div className="second-page__media-frame relative justify-items-center h-[620px] w-[520px] rounded-xl">
             <p className="max-w-lg text-center text-base leading-8 text-gray-700 sm:text-lg montserrat">
               Lo único que puedo hacer ahora es aprender de lo que pasó y demostrártelo con mis acciones.<br></br>
               Pero sobre todo quiero que sepas algo:
@@ -40,21 +40,21 @@ export function SecondPage({ onNext, onBack }: SecondPageProps) {
             <img
               src={img1}
               alt=""
-              className="absolute bottom-[-20%] left-1/2 w-[620px]h-[920px] -translate-x-1/2  z-30 rounded-xl object-cover "
+              className="second-page__image absolute bottom-[-20%]  z-30 rounded-xl object-cover"
             />
           </div>
 
         </div>
         <button
           onClick={onBack}
-          className="rounded absolute bottom-10 left-40 bg-[#db8b9d] px-6 py-3 font-bold text-white transition hover:bg-[#83313d]"
+          className="navigation-button navigation-button--back"
         >
           <FontAwesomeIcon icon={faArrowLeft} />
 
         </button>
         <button
           onClick={onNext}
-          className="absolute bottom-10 right-40 rounded bg-[#db8b9d] px-6 py-3 font-bold text-white transition  hover:bg-[#83313d]"
+          className="navigation-button navigation-button--next"
         >
           <FontAwesomeIcon icon={faArrowRight} />
 

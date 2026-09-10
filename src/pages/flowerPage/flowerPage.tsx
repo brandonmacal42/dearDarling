@@ -203,7 +203,7 @@ export function IntroPage({ onNext }: IntroPageProps) {
 
           <button
             onClick={onNext}
-            className="absolute bottom-8 right-8 z-40 rounded bg-[#db8b9d] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#83313d] hover:shadow-xl"
+            className="navigation-button navigation-button--start"
           >
             Comenzar 🤍
           </button>
