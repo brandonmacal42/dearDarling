@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import img1 from "../assets/image3.png";
-import img2 from "../assets/image10.png";
-import img3 from "../assets/image15.png";
-import img4 from "../assets/image14.png";
+import img2 from "../assets/image18.png";
+import img3 from "../assets/image16.png";
+import img4 from "../assets/image17.png";
 import img5 from "../assets/tape.webp";
 import img6 from "../assets/logo1.png";
 type FifthPageProps = {
@@ -33,10 +33,10 @@ export function FifthPage({ onNext, onBack }: FifthPageProps) {
 
         <div className="relative z-10 w-full max-w-[620px] lg:w-[48%]">
           <div className="relative grid grid-cols-2 gap-4 pt-10 sm:gap-6 sm:pt-12">
-            <img src={img1} alt="Recuerdo con amigos" className="h-full w-full scale-[1.5] object-contain" />
-            <img src={img2} alt="Recuerdo juntos" className="h-full scale-[1.5] rotate-[-.1rad] -translate-y-[50px] w-full object-contain" />
-            <img src={img3} alt="Recuerdo especial" className="h-full w-full scale-[1.4] object-contain translate-y-[60px] translate-x-[-40px]  rotate-[-.15rad]" />
-            <img src={img4} alt="Otro recuerdo especial" className="h-full scale-[1.4] w-full object-contain" />
+            <img src={img1} alt="Recuerdo con amigos" className="photo h-full w-full scale-[1.4] object-contain" />
+            <img src={img2} alt="Recuerdo juntos" className="photo h-full scale-[1.8] rotate-[-.1rad] -translate-y-[50px] w-full object-contain" />
+            <img src={img3} alt="Recuerdo especial" className="photo h-full w-full scale-[1.9] object-contain translate-y-[60px] translate-x-[-40px] rotate-[-.15rad]" />
+            <img src={img4} alt="Otro recuerdo especial" className="photo h-full scale-[1.5] w-full object-contain" />
           </div>
           <img
             src={img5}

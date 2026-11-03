@@ -44,9 +44,9 @@ export function SevenPage({ onNext, onBack }: SevenPageProps) {
 
 				<div className="responsive-page__media relative right-[20%] z-10 flex max-w-xl flex-col items-center text-center">
 					<div className="relative h-[420px] w-[320px] rounded-xl">
-						<img src={img1} alt="Recuerdo principal" className="absolute bottom-[-5%] scale-[1.7] object-cover" />
-						<img src={img2} alt="Recuerdo" className="absolute bottom-[75%] left-[50%] scale-[1.5] rounded-xl rotate-[-0.09rad]" />
-						<img src={img3} alt="Recuerdo" className="absolute bottom-[20%] left-[110%] scale-[1.5] rounded-xl rotate-[0.09rad]" />
+						<img src={img1} alt="Recuerdo principal" className="absolute bottom-[-5%] scale-[1.7] photo object-cover" />
+						<img src={img2} alt="Recuerdo" className="absolute bottom-[75%] left-[50%] scale-[1.5] rounded-xl rotate-[-0.09rad] photo" />
+						<img src={img3} alt="Recuerdo" className="absolute bottom-[20%] left-[110%] scale-[1.5] rounded-xl rotate-[0.09rad] photo" />
 
 					</div>
 				</div>

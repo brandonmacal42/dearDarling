@@ -40,7 +40,7 @@ export function SecondPage({ onNext, onBack }: SecondPageProps) {
             <img
               src={img1}
               alt=""
-              className="second-page__image absolute bottom-[-20%]  z-30 rounded-xl object-cover"
+              className="second-page__image absolute bottom-[-20%] photo z-30 rounded-xl object-cover"
             />
           </div>
 

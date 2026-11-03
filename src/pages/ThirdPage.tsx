@@ -37,8 +37,8 @@ export function SecondNextPage({ onNext, onBack }: SecondNextPageProps) {
 
         <div className="third-page__media responsive-page__media relative z-10 right-[20%] flex max-w-xl flex-col items-center text-center">
           <div className="third-page__media-frame relative h-[420px] w-[320px] rounded-xl">
-            <img src={img6} alt="Recuerdo especial" className="third-page__main-image h-full scale-[1.5] w-full translate-6 object-cover rotate-[-0.042rad]" />
-            <img src={img2} alt="Otro recuerdo especial" className="third-page__secondary-image rounded-xl absolute scale-[1.7] left-[100%] bottom-[50%] rotate-[0.09rad]" />
+            <img src={img6} alt="Recuerdo especial" className="third-page__main-image h-full scale-[1.5] w-full translate-6 object-cover rotate-[-0.042rad] photo" />
+            <img src={img2} alt="Otro recuerdo especial" className="third-page__secondary-image rounded-xl absolute scale-[1.7] left-[100%] bottom-[50%] rotate-[0.09rad] photo" />
           </div>
         </div>
         <button

@@ -40,9 +40,9 @@ export function BeforeThirdPage({ onNext, onBack }: BeforeThirdPageProps) {
 
 				<div className="fourth-page__media responsive-page__media relative z-10 right-[20%] flex max-w-xl flex-col items-center text-center">
 					<div className="fourth-page__media-frame relative h-[420px] w-[320px] rounded-xl">
-						<img src={img1} alt="Image 1" className="fourth-page__image fourth-page__image--main absolute h-full w-full top-[50%] scale-[1.2] object-cover" />
-						<img src={img2} alt="Image 2" className="fourth-page__image rounded-xl absolute left-[30%] bottom-[55%] rotate-[-0.09rad] scale-[1.4]" />
-						<img src={img3} alt="Image 3" className="fourth-page__image rounded-xl scale-[1.4] absolute left-[90%] bottom-[0%] rotate-[0.09rad]" />
+						<img src={img1} alt="Image 1" className="fourth-page__image fourth-page__image--main absolute h-full w-full top-[50%] scale-[1.2] photo object-cover" />
+						<img src={img2} alt="Image 2" className="fourth-page__image rounded-xl absolute left-[30%] bottom-[55%] rotate-[-0.09rad] photo scale-[1.4]" />
+						<img src={img3} alt="Image 3" className="fourth-page__image rounded-xl scale-[1.4] absolute left-[90%] bottom-[0%] photo rotate-[0.09rad]" />
 					</div>
 
 				</div>

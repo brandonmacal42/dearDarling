@@ -40,9 +40,9 @@ export function SixthPage({ onNext, onBack }: SixthPageProps) {
 
 				<div className="responsive-page__media relative right-[20%] z-10 flex max-w-xl flex-col items-center text-center">
 					<div className="relative h-[420px] w-[320px] rounded-xl">
-						<img src={img1} alt="Recuerdo principal" className="absolute bottom-[-5%] scale-[1.7] object-cover" />
-						<img src={img2} alt="Recuerdo" className="absolute bottom-[75%] scale-[1.5] left-[50%] rounded-xl rotate-[-0.09rad]" />
-						<img src={img3} alt="Recuerdo" className="absolute bottom-[20%] scale-[1.5] left-[110%] rounded-xl rotate-[0.09rad]" />
+						<img src={img1} alt="Recuerdo principal" className="absolute bottom-[-5%] scale-[1.7] photo object-cover" />
+						<img src={img2} alt="Recuerdo" className="absolute bottom-[75%] scale-[1.5] left-[50%] rounded-xl rotate-[-0.09rad] photo" />
+						<img src={img3} alt="Recuerdo" className="absolute bottom-[20%] scale-[1.5] left-[110%] rounded-xl rotate-[0.09rad] photo" />
 						<p className="shadows absolute bottom-[-10%] left-[85%] rotate-[0.09rad] text-2xl  w-[350px] z-40"><b>
 							Me gusta pensar que todavía nos queda muchísimo por vivir</b></p>
 						<img src={img5} alt="Decoración floral" className="absolute bottom-[-20%] left-[90%] rounded-xl scale-[1.5] w-[1200px] h-[200px] max-widht-[1200px] rotate-[0.09rad] z-30" />
